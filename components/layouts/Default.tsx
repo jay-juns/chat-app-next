@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Head from "next/head";
 
@@ -14,7 +13,6 @@ const DefaultLayout = ({ children }: LayoutProps) => {
         <title>Next Blog</title>
       </Head>
       <div className='app_wrapper'>
-        <Header />
         <div>
           디펄트 레이아웃
         </div>

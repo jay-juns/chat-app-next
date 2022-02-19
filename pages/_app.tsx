@@ -6,6 +6,7 @@ import { lightTheme, darkTheme } from '../styles/theme'
 import { GlobalStyles } from '../styles/globalStyles'
 import { useDarkMode } from '../utils/customHooks/useDarkMode'
 import ToggleThemeBtn from '../components/toggleThemeBtn/ToggleThemeBtn'
+import Header from '../components/header/Header'
 
 type AppLayoutProps = {
   Component: PageWithLayoutType
@@ -24,7 +25,9 @@ function MyApp({ Component, pageProps }: AppLayoutProps) {
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
+      <Header>
         <ToggleThemeBtn theme={theme} toggleTheme={toggleTheme} />
+      </Header>
       <Layout>
         <Component {...pageProps} />
       </Layout>
